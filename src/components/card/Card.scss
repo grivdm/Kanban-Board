@@ -1,0 +1,49 @@
+@import "../../styles/card-temp";
+@import "../../styles/fonts";
+
+@mixin topic-label-color($R, $G, $B) {
+  background-color: rgba($R, $G, $B, 0.6);
+  border: rgba($R, $G, $B, 1) 1px solid;
+}
+
+.card {
+  @extend .card-temp;
+  width: 300px;
+  height: 150px;
+
+  p {
+    overflow: scroll;
+  }
+
+  &:hover {
+    background-color: #fbff0020;
+  }
+
+  &-header {
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15px;
+
+    @for $i from 1 through 3 {
+      .topic-#{$i} {
+        font-size: 65%;
+        font-weight: 600;
+        color: #333333;
+        padding: 5px;
+        border-radius: 4px;
+        font-family: "Fira Mono", monospace;
+        @if $i == 1 {
+          @include topic-label-color(160, 240, 240);
+        } @else if $i == 2 {
+          @include topic-label-color(250, 230, 140);
+        } @else if $i == 3 {
+          @include topic-label-color(260, 100, 100);
+        }
+      }
+    }
+  }
+}
