@@ -14,8 +14,8 @@ const AddTask = ({ onAddTask }) => {
   };
 
   return (
-    < div className="add-task"> 
-    
+    <> 
+
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -27,7 +27,7 @@ const AddTask = ({ onAddTask }) => {
         <IoIosAddCircle className="submit-button-icon"/>
       </button>
     </form>
-    </div>
+    </>
   );
 };
 

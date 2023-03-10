@@ -9,7 +9,7 @@ const Column = ({ title, columnId, children }) => {
       <Droppable droppableId={columnId}>
         {(provided) => (
           <div
-            className="card-list"
+            className="column__content"
             ref={provided.innerRef}
             {...provided.droppableProps}
           >

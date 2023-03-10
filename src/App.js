@@ -6,6 +6,7 @@ function App() {
     <div className="app">
       <h1>Kanban board</h1>
       <ProjectPage />
+      <p>made with love by <a href="https://github.com/grivdm">grivdm</a></p>
     </div>
   );
 }
